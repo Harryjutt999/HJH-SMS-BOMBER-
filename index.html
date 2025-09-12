@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HJH SMS Tool</title>
+  <title>HJH SMS BOMBER</title>
   <style>
-    /* General Layout */
     html, body {
       height: 100%;
       width: 100%;
@@ -14,7 +13,7 @@
       font-family: "Segoe UI", Roboto, sans-serif;
       background: black;
       color: #f1f5f9;
-      overflow: hidden; /* ❌ Scroll disable */
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -41,7 +40,7 @@
       100% { transform: translateY(100vh); }
     }
 
-    /* Card Box */
+    /* Card */
     .card {
       position: relative;
       z-index: 1;
@@ -64,7 +63,6 @@
       letter-spacing: 1px;
       animation: glowText 2s infinite alternate;
     }
-
     @keyframes glowText {
       from { text-shadow: 0 0 10px #ff1a8c, 0 0 20px #ff3399; }
       to { text-shadow: 0 0 20px #ff66cc, 0 0 40px #ff1a8c; }
@@ -95,7 +93,6 @@
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     button:hover {
       transform: scale(1.07);
       box-shadow: 0 0 18px #ff4da6;
@@ -132,7 +129,6 @@
       z-index: 1;
       animation: fadeIn 2s ease-in-out;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(15px); }
       to { opacity: 1; transform: translateY(0); }
@@ -160,7 +156,7 @@
   </footer>
 
   <script>
-    // Matrix Effect Generator
+    // Matrix Effect
     const bg = document.querySelector('.matrix-bg');
     for (let i = 0; i < 70; i++) {
       let span = document.createElement('span');
@@ -171,7 +167,7 @@
       bg.appendChild(span);
     }
 
-    // API Call Function
+    // API Call
     async function sendSMS() {
       let num = document.getElementById("number").value;
       if (!num) return alert("⚠️ Please enter a number!");
@@ -195,4 +191,4 @@
     }
   </script>
 </body>
-  </html>
+</html>
