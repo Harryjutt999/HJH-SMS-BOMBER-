@@ -2,193 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HJH SMS BOMBER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>𝐇𝐉𝐇 𝐇𝐀𝐂𝐊𝐄𝐑</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    html, body {
-      height: 100%;
-      width: 100%;
+    body {
       margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Roboto, sans-serif;
-      background: black;
-      color: #f1f5f9;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: #0b0015;
+      color: white;
+      text-align: center;
     }
 
-    /* Background Matrix Animation */
-    .matrix-bg {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: black;
-      overflow: hidden;
-      z-index: 0;
+    /* Header */
+    .header {
+      margin: 60px auto 25px auto;
+      padding: 25px 20px;
+      width: 75%;
+      max-width: 400px;
+      background: #0d001a;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00cfff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
     }
-    .matrix-bg span {
+    .logo-wrapper {
       position: absolute;
-      color: #ff1a8c;
-      font-size: 16px;
-      animation: drop 4s linear infinite;
-      opacity: 0.6;
+      left: 15px;
+      width: 45px;   /* chhota */
+      height: 45px;  /* chhota */
+      background: #00cfff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    @keyframes drop {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(100vh); }
+    .logo-wrapper img {
+      width: 38px;   /* chhota */
+      height: 38px;  /* chhota */
+      border-radius: 50%;
+    }
+    .header h1 {
+      flex: 1;
+      margin: 0;
+      color: #00cfff;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
     }
 
     /* Card */
     .card {
-      position: relative;
-      z-index: 1;
-      background: rgba(30, 41, 59, 0.9);
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 12px 40px rgba(255, 20, 147, 0.7);
-      width: 100%;
-      max-width: 450px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      animation: fadeIn 1.5s ease-in-out;
+      margin: 30px auto;
+      padding: 25px;
+      width: 75%;
+      max-width: 400px;
+      background: #0d001a;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00cfff;
     }
-
-    h2 {
-      font-size: 26px;
+    .card h2 {
+      margin-top: 5px;
       margin-bottom: 20px;
-      color: #ff4da6;
-      text-shadow: 0 0 10px rgba(255, 20, 147, 0.8);
-      letter-spacing: 1px;
-      animation: glowText 2s infinite alternate;
+      font-size: 26px;
+      color: #00cfff;
     }
-    @keyframes glowText {
-      from { text-shadow: 0 0 10px #ff1a8c, 0 0 20px #ff3399; }
-      to { text-shadow: 0 0 20px #ff66cc, 0 0 40px #ff1a8c; }
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 14px;
+    .card input {
+      width: 85%;
+      max-width: 300px;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #00cfff;
       border-radius: 8px;
-      border: none;
       outline: none;
-      font-size: 15px;
-      background: #1e293b;
-      color: #fff;
-      box-shadow: inset 0 0 5px rgba(255, 20, 147, 0.4);
-    }
-
-    button {
-      background: linear-gradient(90deg, #ff1a8c, #ff66b2);
-      border: none;
-      padding: 12px;
-      width: 100%;
-      border-radius: 8px;
+      text-align: center;
       font-size: 16px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    button:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 18px #ff4da6;
+      background: #000;
+      color: #fff;
     }
 
-    /* WhatsApp Button */
-    .whatsapp-btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 50px;
-      font-size: 15px;
+    /* Buttons */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 85%;
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 12px;
+      background: #00cfff;
+      color: #000;
+      font-size: 16px;
       font-weight: bold;
-      text-decoration: none;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
       transition: 0.3s;
     }
-    body:not(.dark) .whatsapp-btn {
-      background: linear-gradient(90deg, #ff1a8c, #ff66b2);
-      color: #fff;
-      box-shadow: 0 0 12px rgba(255, 20, 147, 0.7);
-    }
-    body.dark .whatsapp-btn {
-      background: linear-gradient(90deg, #00cc44, #22ff22);
-      color: #fff;
-      box-shadow: 0 0 12px rgba(0, 255, 0, 0.6);
+    .btn:hover {
+      background: #009fbb;
     }
 
     /* Footer */
     footer {
-      margin-top: 18px;
-      font-size: 13px;
-      color: #bbb;
-      text-align: center;
-      z-index: 1;
-      animation: fadeIn 2s ease-in-out;
+      margin-top: 30px;
+      font-size: 14px;
+      color: gray;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+    footer span {
+      color: #00cfff;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <!-- Background Animation -->
-  <div class="matrix-bg"></div>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-wrapper">
+      <img src="https://i.postimg.cc/dVWsQpKw/IMG-20250913-WA0039.jpg" alt="logo" />
+    </div>
+    <h1>𝐇𝐉𝐇 𝐇𝐀𝐂𝐊𝐄𝐑</h1>
+  </div>
 
   <!-- Card -->
   <div class="card">
-    <h2>HJH SMS BOMBER</h2>
-    <input type="text" id="number" placeholder="Enter Number (92xxxxxxxxxx)" />
-    <button onclick="sendSMS()">🚀 Send SMS</button>
-    <br>
-    <a href="https://whatsapp.com/channel/0029VbAaNJ6C1FuB0mIAx93M" target="_blank" class="whatsapp-btn">
-      📱 Join WhatsApp Channel
-    </a>
+    <h2> 𝐇𝐉𝐇 𝐒𝐌𝐒 𝐁𝐎𝐌𝐁𝐄𝐑 </h2>
+    <input type="text" id="number" placeholder="⚡Enter number (e.g., 92323...)" />
+    <button class="btn" id="launchBtn">
+      <i class="fas fa-rocket"></i> 𝙎𝙀𝙉𝘿 𝙎𝙈𝙎༒
+    </button>
+    <button class="btn" onclick="window.open('https://whatsapp.com/channel/0029VbAaNJ6C1FuB0mIAx93M','_blank')">
+      <i class="fab fa-whatsapp"></i> 𝑱𝒐𝒊𝒏 𝑾𝒉𝒂𝒕𝒔𝒂𝒑𝒑 
+    </button>
+    <p id="status"></p>
   </div>
 
   <!-- Footer -->
   <footer>
-    Developed by <b>Mr Hamza Jutt</b>
+    <span>Developed by <span>▄︻┻═┳一𝐇𝐉𝐇 𝐇𝐀𝐂𝐊𝐄𝐑 🔥</span>
   </footer>
 
   <script>
-    // Matrix Effect
-    const bg = document.querySelector('.matrix-bg');
-    for (let i = 0; i < 70; i++) {
-      let span = document.createElement('span');
-      span.innerText = Math.random() > 0.5 ? "1" : "0";
-      span.style.left = Math.random() * 100 + "vw";
-      span.style.animationDuration = (Math.random() * 3 + 2) + "s";
-      span.style.fontSize = (12 + Math.random() * 12) + "px";
-      bg.appendChild(span);
-    }
+    const btn = document.getElementById("launchBtn");
+    const status = document.getElementById("status");
 
-    // API Call
-    async function sendSMS() {
-      let num = document.getElementById("number").value;
-      if (!num) return alert("⚠️ Please enter a number!");
+    btn.addEventListener("click", async () => {
+      const number = document.getElementById("number").value.trim();
+      if (!number) {
+        alert("Please enter a number!");
+        return;
+      }
+
+      btn.innerHTML = '<i class="fas fa-rocket"></i> Launching...';
+      status.textContent = "";
 
       try {
-        let res = await fetch("/api/sms", {
+        const res = await fetch("/api/sms", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ number: num })
+          body: JSON.stringify({ number }),
         });
 
-        let data = await res.json();
+        const data = await res.json();
+
         if (data.success) {
-          alert("✅ SMS Sent: " + data.result);
+          status.style.color = "lime";
+          status.textContent = "✅ Successfully sent!";
         } else {
-          alert("❌ Error: " + (data.error || "Unknown"));
+          status.style.color = "red";
+          status.textContent = "❌ Failed: " + (data.error || "Unknown error");
         }
       } catch (err) {
-        alert("⚠️ Server error: " + err.message);
+        status.style.color = "red";
+        status.textContent = "❌ Server error";
       }
-    }
+
+      btn.innerHTML = '<i class="fas fa-rocket"></i> Launch SB';
+    });
   </script>
 </body>
-</html>
+  </html>
